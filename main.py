@@ -1,5 +1,4 @@
-# Initialize API for English Wikipedia
-
+import sys
 import wikipediaapi
 
 wiki_wiki = wikipediaapi.Wikipedia('MyProjectName (merlin@example.com)', 'en')
@@ -15,10 +14,12 @@ def print_language_content():
     # Define the page to fetch
     program_page = wiki_wiki.page(f"{user_input} (programming language)")
 
-    # Print the summary (introductory paragraph)
-    print(program_page.summary)
-
-    # Print full text of the page if needed
-    print(program_page.text[:1000])  # First 1000 characters, for example
+    if program_page.exists():
+        # Print the summary (introductory paragraph)
+        print(program_page.summary)
+    else:
+        print("Page for: " + user_input + "not found")
+    # # Print full text of the page if needed
+    # print(program_page.text[:1000])  # First 1000 characters, for example
 
 print_language_content()
