@@ -36,11 +36,12 @@ def print_main_screen():
                   To get started...
                   """)
     
-    console.input("""
+    user_topic = console.input("""
                   Enter a topic you would like to explore. 
                   Ex programming, music, history \n
                   """)
     
+        
     
     
         
