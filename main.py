@@ -23,11 +23,26 @@ def print_language_content():
     # print(program_page.text[:1000])  # First 1000 characters, for example
 
 def print_main_screen():
-    console = Console
+    console = Console()
+    
     console.clear()
-    while True:
-        
-        console.print("[bold red] Wikiscraper [/bold red]")
+    console.rule("[bold red] Wikiscraper")
+    
+    console.print("""
+                  Welcome to Wikiscraper. A TUI application that lets 
+                  you interact with the wikipedia-api for a distraction free 
+                  Wikipedia experience. Made for terminal lovers!
+                  
+                  To get started...
+                  """)
+    
+    console.input("""
+                  Enter a topic you would like to explore. 
+                  Ex programming, music, history \n
+                  """)
+    
+    
+    
         
         
 print_main_screen()
