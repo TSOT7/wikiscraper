@@ -1,10 +1,10 @@
 import sys
 import wikipediaapi
+from rich.console import Console
+from rich.prompt import Prompt
+
 
 wiki_wiki = wikipediaapi.Wikipedia('MyProjectName (merlin@example.com)', 'en')
-
-
-
 
 # page_py = wiki_wiki.page('Python_(programming_language)')
 
@@ -22,4 +22,14 @@ def print_language_content():
     # # Print full text of the page if needed
     # print(program_page.text[:1000])  # First 1000 characters, for example
 
-print_language_content()
+def print_main_screen():
+    console = Console
+    console.clear()
+    while True:
+        
+        console.print("[bold red] Wikiscraper [/bold red]")
+        
+        
+print_main_screen()
+# print_language_content()
+
